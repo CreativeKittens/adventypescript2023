@@ -12,3 +12,13 @@ export function readLine(sourceFilePath: string): string[] {
 
 	return text ? [...text] : []
 }
+
+export function sortNumber(
+	arr: number[],
+	order: 'asc' | 'desc' = 'asc',
+): number[] {
+	return arr.sort((a, b) => {
+		if (order === 'desc') return b - a
+		return a - b
+	})
+}
